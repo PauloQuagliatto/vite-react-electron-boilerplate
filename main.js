@@ -14,8 +14,14 @@ const createWindow = () => {
       contextIsolation: false,
     },
   });
+
   win.setMenu(null);
-  isDev ? win.loadURL("http://localhost:3000") : win.loadFile("./dist/index.html");
+  
+  isDev && win.webContents.openDevTools();
+
+  isDev
+    ? win.loadURL("http://localhost:3000")
+    : win.loadFile("./dist/index.html");
 };
 
 app.whenReady().then(createWindow);

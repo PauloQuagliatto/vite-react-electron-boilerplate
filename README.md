@@ -11,7 +11,7 @@ The page will reload if you make edits.
 
 ### `npm run electron:start`
 
-Runs the electron in development mode which waits to the localhost connection.
+Runs the electron in development mode which uses the localhost connection.
 
 ### `npm run build`
 
